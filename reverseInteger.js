@@ -22,7 +22,6 @@ const inverser = (data) => {
             
             reversed_string = reversed_string.concat(string_of_digits[i]); 
         }
-        console.log('first symbol of reversed_string:', reversed_string[0])
         return reversed_string;
     }
     else if (string_of_digits[0]=='0'){
@@ -31,7 +30,6 @@ const inverser = (data) => {
             
             reversed_string = reversed_string.concat(string_of_digits[i]); 
         }
-        console.log('first symbol of reversed_string:', reversed_string[0])
         return reversed_string;
     }
     else {
