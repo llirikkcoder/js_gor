@@ -9,34 +9,34 @@
 // Example 3:
 // Input: 120 Output: 21
 
-let digits = process.argv[2];
+let digits = 00321456;
 
-const inverser = (data) => {
-    let string_of_digits = data.toString();
-    let amount_of_digits = data.toString().length;
-    let reversed_string = '';
+const inverser = (data) => { // data - любое целое число
+    let stringOfDigits = data.toString();
+    let amountOfDigits = data.toString().length;
+    let reversedString = '';
 
-    if (string_of_digits[0]=='-'){
-        reversed_string = reversed_string.concat('-', reversed_string); 
-        for(let i = amount_of_digits - 1; i > 0; i--) {
-            
-            reversed_string = reversed_string.concat(string_of_digits[i]); 
+    if ( stringOfDigits[0]=='-' ){
+        reversedString = reversedString.concat('-', reversedString); 
+        for(let i = amountOfDigits - 1; i > 0; i--) {           
+            reversedString = reversedString.concat(stringOfDigits[i]); 
         }
-        return reversed_string;
+        return reversedString;
     }
-    else if (string_of_digits[0]=='0'){
-
-        for(let i = amount_of_digits - 1; i > 0; i--) {
-            
-            reversed_string = reversed_string.concat(string_of_digits[i]); 
+    else if ( stringOfDigits[0]=='0' ){
+        for( let i = amountOfDigits - 1; i > 0; i-- ) { 
+            reversedString = reversedString.concat(stringOfDigits[i]); 
         }
-        return reversed_string;
+        return reversedString;
+    }
+    else if ( stringOfDigits ==''|| stringOfDigits==undefined ){
+        return "Введите целое число!";
     }
     else {
-        for(let i = amount_of_digits - 1; i >= 0; i--) {    
-            reversed_string = reversed_string.concat(string_of_digits[i]); 
+        for( let i = amountOfDigits - 1; i >= 0; i-- ) {    
+            reversedString = reversedString.concat(stringOfDigits[i]); 
         }
-        return reversed_string;
+        return reversedString;
     }
 }
 
